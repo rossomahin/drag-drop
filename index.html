@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag&Drop</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+  </style>
+</head>
+<body>
+  <header class="header" style="display: flex; justify-content: center; position: relative; z-index: 2;">
+    <div class="no-play-zone1"></div>
+    <p class="h1">Drag&drop</p>
+    <div class="no-play-zone1"></div>
+  </header>
+  <div class="life" id="lifeSystem">
+    <img src="assets/heart.png" alt="heart" class="life-system" style="height: 50px; width: 50px;">
+    <img src="assets/heart.png" alt="heart" class="life-system" style="height: 50px; width: 50px;">
+    <img src="assets/heart.png" alt="heart" class="life-system" style="height: 50px; width: 50px;">
+  </div>  
+  <div class="zone">
+    <div class="playground" id="playground">
+      <div class="modalWindow" id="modalWindow" style="display:none;">
+        <div class="start-modal" id="start-modal">
+          <div class="configButtons">
+            <button class="info" id="info" style="width:50px; height: 50px;"><img src="assets/Info_Squared_icon-icons.com_55884.png" alt="info" style="width: 50px; height: 50px; margin: 0 auto"></button>
+            <button class="settings" id="settings" style="width:50px; height: 50px;"><img src="assets/settings.png" alt="info" style="width: 50px; height: 50px; margin: 0 auto"></button>
+          </div>
+          <p class="welcome">Welcome</p>
+          <button class="start-button" id="startButton">Start</button>
+          <p class="score">Max score: <span id="maxScoreValue">0</span></p>
+          <button class="reset-button" id="resetButton">Reset Score <img src="assets/reset.png" class="reset-img" style="width: 50px; height: 50px"></button>
+        </div>  
+      </div>
+      <div class="modalWindow" id="gameOverModal" style="display:none;">
+        <div class="start-modal" id="gameOver-modal">
+          <p class="welcome">Game Over!</p>
+          <button class="reset-button" id="restartButton">Restart Game <img src="assets/reset.png" class="reset-img" style="width: 50px; height: 50px"></button>
+          <button class="mainMenu" id="mainMenu">Main menu</button>
+          
+        </div>
+      </div>    
+      <div class="message"></div>
+    </div>
+  </div>
+  <div class="baskets">
+    <div class="trash-zone" id="trash-zone-plastic" style="height: 100px; width: 100px;"></div>
+    <div class="trash-zone" id="trash-zone-paper" style="height: 100px; width: 100px;"></div>
+    <div class="trash-zone" id="trash-zone-waste" style="height: 100px; width: 100px;"></div>
+  </div>
+  <footer class="foot">
+    <div class="no-play-zone2">
+      <p class="counter">Current score: <span id="counterValue">0</span></p>
+      <p style="text-transform: lowercase;">alpha-test v0.3</p>
+      <p class="time-session">Time session: <span id="timeSession">0</span> seconds</p>
+    </div>
+  </footer>
+  <audio id="background-music" src="assets/cyberpunk_2077_hyper_spoiler.mp3" loop></audio>
+  <script src="scriptv2.js"></script>
+</body>
+</html>
